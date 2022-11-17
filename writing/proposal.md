@@ -16,7 +16,7 @@ In a bulleted list, include predefined requirements that must be met for your pr
 - marker has to touch the white board
 - Evo Arm drawing certain shapes to make a picture.
 - Image of a tree must be created
-- Optional, camera work. 
+- Optional, camera work. l
 
 ## Feasibility
 
