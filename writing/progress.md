@@ -1,4 +1,4 @@
-# Progress Report by Add Team Member Names
+# Progress Report by Gary, Makell
 
 ## Completed Prototype
 

@@ -16,14 +16,13 @@ In a bulleted list, include predefined requirements that must be met for your pr
 - marker has to touch the white board
 - Evo Arm drawing certain shapes to make a picture.
 - Image of a tree must be created
-- Optional, camera work. l
+- Optional, camera works. 
 
 ## Feasibility
 
 Explain why is your proposed idea feasible. For example, are you extending a previous project or have a sample code from someone else's project to start with?
 
 Our project is like a continuation of our previous projects. We got our evo arm to move and pick up certain items. Our next step is to create a 3d printed box that is able to hold on to the marker. The next thing we have to do is make the drawing motion more precise and efficient. 
-
 
 ## Additional Hardware
 
