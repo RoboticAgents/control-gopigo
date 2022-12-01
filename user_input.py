@@ -1,42 +1,52 @@
 import easygopigo3 as easy
-import time
-import pygame
+# import time
+# import pygame
 
-my_gopigo = easy.EasyGoPiGo3()
+gpg = easy.EasyGoPiGo3()
 
+def command(inputs):
+    if inputs == 'w':
+        gpg.forward()
+
+    if inputs == 's':
+        gpg.backward()
+
+    if inputs == 'a':
+        gpg.left()
+
+    if inputs == 'd':
+        gpg.right()
+
+#     if inputs == 'q':
+#         print("increasing speed")
+
+#     if inputs == 'e':
+#         print("decreasing speed")
+
+    if inputs == 'z':
+        print("playing music 1 here")
+
+    if inputs == 'x':
+        print("playing music 2 here")
+
+    if inputs == 'c':
+        print("playing music 3 here")
+
+    if inputs == 'p':
+        gpg.stop()
 
 def main():
-    inputs = input("enter input here: ")
-    print("this is your input: ", inputs)
+
+    mylist = []
+
     while True:
-        if inputs == 'w':
-            # gpg.drive_inches(5)
-            print("going forward")
-        
-        if inputs == 's':
-        
-            print("going backward")
-        
-        if inputs == 'q':
-        
-            print("turn left slightly")
+
+        inputs = input("Enter command here: ")
+        #     print("this is your input:", inputs)
+
+        mylist.append(inputs)
+        command(mylist[0])
+        # print(mylist)
+        mylist.clear()
     
-        if inputs == 'e':
-            print("turn right slightly")
-    
-        if inputs == 'a':
-            print("turn left 90 degree")
-    
-        if inputs == 'd':
-            print("turn right 90 degree")
-    
-        if inputs == 'z':
-            print("turn left x degree")
-    
-        if inputs == 'c':
-            print("turn right x degree")
-        
-        if inputs == 'p': # working 
-            print("exit code")
-        return False
 main()

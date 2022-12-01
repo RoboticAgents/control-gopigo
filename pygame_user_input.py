@@ -1,9 +1,9 @@
-# import easygopigo3 as easy
+import easygopigo3 as easy
 import time
 import pygame
 import sys
 
-# my_gopigo = easy.EasyGoPiGo3()
+my_gopigo = easy.EasyGoPiGo3()
 
 pygame.init()
 pygame.display.set_mode((1200,800))
