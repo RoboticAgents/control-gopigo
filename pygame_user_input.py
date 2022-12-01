@@ -1,11 +1,12 @@
-import easygopigo3 as easy
+# import easygopigo3 as easy
 import time
 import pygame
 import sys
 
-my_gopigo = easy.EasyGoPiGo3()
+# my_gopigo = easy.EasyGoPiGo3()
 
 pygame.init()
+pygame.display.set_mode((1200,800))
 
 def main():
     while True:
@@ -20,16 +21,17 @@ def main():
             print("turn left slightly")
           if event.key == pygame.K_e:
             print("turn right slightly")
-          if inputs == event.key == pygame.K_a:
+          if event.key == pygame.K_a:
             print("turn left 90 degree")
-          if inputs == event.key == pygame.K_d:
+          if event.key == pygame.K_d:
             print("turn right 90 degree")
-          if inputs == event.key == pygame.K_z:
+          if event.key == pygame.K_z:
             print("turn left x degree")
-          if inputs == event.key == pygame.K_c:
+          if event.key == pygame.K_c:
             print("turn right x degree")
-          if inputs == event.key == pygame.K_p: # working 
+          if event.key == pygame.K_p: # working 
             pygame.quit()
             print("exit code")
             return False
+        pygame.display.update()
 main()
