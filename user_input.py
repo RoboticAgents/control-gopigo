@@ -1,13 +1,12 @@
-import easygopigo3 as easy
-# import time
 import pygame
 
 gpg = easy.EasyGoPiGo3()
 
 pygame.mixer.init()
-
+i = 0
 
 def command(inputs):
+    global i
     if inputs == 'w':
         gpg.forward()
 
@@ -19,12 +18,20 @@ def command(inputs):
 
     if inputs == 'd':
         gpg.right()
+    
+    if inputs == 'q':
+    
+        i += 50
+        gpg.set_motor_dps(gpg.MOTOR_RIGHT, i)
+        
+        gpg.set_motor_dps(gpg.MOTOR_LEFT, i)
 
-#     if inputs == 'q':
-#         print("increasing speed")
-
-#     if inputs == 'e':
-#         print("decreasing speed")
+    if inputs == 'e':
+        
+        i -= 50
+        gpg.set_motor_dps(gpg.MOTOR_RIGHT, i)
+        
+        gpg.set_motor_dps(gpg.MOTOR_LEFT, i)
 
     if inputs == 'z':
         if pygame.mixer.music.get_busy():
@@ -46,17 +53,21 @@ def command(inputs):
         pygame.mixer.music.load("No_Role_Modelz.mp3")
         pygame.mixer.music.play()
         print("playing music 3 here")
-
-    if inputs == 'p':
+            
+    if inputs == 'f':
         gpg.stop()
+    if inputs == 'v':
+        pygame.mixer.music.pause()
+    if inputs == 'p':
+        pygame.quit()
 
 def main():
-
+    # TODO make GUI here 
+    print("HELLO WORLD")
     mylist = []
-
     while True:
 
-        inputs = input("Enter command here: ")
+        inputs = input("enter command: ")
         #     print("this is your input:", inputs)
 
         mylist.append(inputs)
