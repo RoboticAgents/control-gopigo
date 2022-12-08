@@ -62,12 +62,36 @@ def command(inputs):
         pygame.quit()
 
 def main():
-    # TODO make GUI here 
-    print("HELLO WORLD")
+    print(""":robot: Welcome to GOPIGO Controller! 
+    Using this program you can control your GOPIGO Robot using your computer keyboard! :keyboard:
+    These are your controls:
+    Q   W   E       P
+    A   S   D   F
+    Z   X   C   V
+
+    Q = Increase Speed ⏩
+    W = Drive Forward ⬆️
+    E = Decrease Speed ⏪
+
+    A = Turn Left ⬅️
+    S = Drive Backwards ⬇️
+    D = Turn Right ➡️
+    F = Stop Moving ⏹️
+
+    Z = Play Song 1 🎵
+    X = Play Song 2 🎵
+    C = Play Song 3 🎵
+    V = Pause Music ⏸️
+
+    P = Stop Music Player ⏹️
+
+    📨 Enter your commands below:
+    """)
+
     mylist = []
     while True:
 
-        inputs = input("enter command: ")
+        inputs = input()
         #     print("this is your input:", inputs)
 
         mylist.append(inputs)
