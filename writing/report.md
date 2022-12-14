@@ -1,4 +1,4 @@
-# Report by Add Team Member Names
+# Report by Makell Logan and Gary Chen
 
 ## Project Summary
 
@@ -6,13 +6,13 @@ For our completed project, we created a program for GOPIGO that would allow peop
 
 ## Project Implementation Details
 
-Step One: You have to connect to a GOPIGO robot that comes with the pygame module if you want to use the music feature if not, then all you need to do is run the code in the notebook.  
+Step One: You have to connect to a GOPIGO robot that comes with the pygame module if you want to use the music feature if not, then all you need to do is run the code in the jupyter notebook.
 
 That's the only step needed to use our program, our GOPIGO robot already had pygame, so we didn't have to manually install it. To create the program we just used our already known knowledge of while loops and if statements to code our implementation. Besides that we referenced old projects to get the commands for GOPIGO. Makell already knew a bit about pygame, so he was able to implement that in pretty easily.
 
 ## Experimental Results
 
-Experiment One: We commanded it while playing wii music. It was able to run fine while playing the music, even when we inputted new commands it didn't interfere with the music command.
+Experiment One: We commanded it while playing wii music. It was able to run fine while playing the music, even when we inputted new commands it didn't interfere with the music command. At first we thought that we may have had to make a seperate list just to store the music inputs, but we didn't.
 
 Experiment Two: We commanded it while playing wii music, then switched between the other two tracks. The music commands and movement commands didn't infere with each other and worked independently. We were able to change tracks smoothly with no interuption to the robots movements.
 
