@@ -1,134 +1,70 @@
-# Final Project: Robot Applications
+# GoPiGo Controller
 
-## Table of Contents
+## Project Summary
 
-- [Timeline](#timeline)
-- [Class Community Guidelines](#class-community-guidelines)
-- [Summary](#summary)
-- [Team Assignments](#team-assignments)
-- [Core Requirements](#core-requirements)
-- [Project Ideas](#project-ideas)
-  - [GoPiGo3](#gopigo)
-  - [Bebop](#bebop)
-  - [evoarm](#evoarm)
-  - [turtlebot](#turtlebot)
-  - [robot simulation](#robot-simulation)
-- [Proposal](#proposal)
-- [Working Prototype and Progress Report](#working-prototype-and-progress-report)
-- [Project Demonstrations](#project-demonstrations)
-- [Assessment](#assessment)
-- [Receiving Assistance](#assistance)
+For our completed project, we created a program for GOPIGO that would allow people to control the GOPIGO Robot using their keyboard. By entering a key the robot will take that action until a new command is entered, with music being the only exception. Using `Q`, the controller can increase the speed of the motors. While `E` does the opposite and decreases the speed. `W` has it drive forward, and `S` tells it to go backwards. A tells it to turn left. `D` tells it to turn right. `F` stops it from moving. `Z`, `X`, and `C` tell it to play different music files using the pygame module. V pauses the music. P stops the music player by quiting the pygame module. We designed this because we wanted to make it easier and more fun to use the GOPIGO robot. This program can be used by anyone without much background knowledge required at all.
 
-## Timeline
+This is the output:
 
-Activity                                                                      | Deadline
------------------------------------------------------------------------------ | ------------------------------------------
-Create a team and complete proposal (including any additional hardware needs) | by 4:20pm on Thursday, November 17th, 2022
-Demonstrate progress during class work time (commits from each member)        | by 10:45am on Tuesday, November 22nd, 2022
-Working prototype and complete progress report                                | by 4:20pm on Thursday, December 1st, 2022
-Final demo and submission                                                     | by 9:30am on Tuesday, December 13th, 2022
+```bash
+    🤖 Welcome to GOPIGO Controller!
+    Using this program you can control your GOPIGO Robot using your computer keyboard! ⌨️
+    These are your controls:
+    Q   W   E       P
+    A   S   D   F
+    Z   X   C   V
 
-## Class Community Guidelines
+    Q = Increase Speed ⏩
+    W = Drive Forward ⬆️
+    E = Decrease Speed ⏪
 
-Throughout the completion of this project you must adhere to the [community guidelines](https://github.com/CMPSC-311-Allegheny-College-Fall-2022/course-information/blob/main/community_guidelines.md) that we developed as a class. To report any violations of the code of conduct, please submit an [anonymous form](https://forms.gle/tePfnLY12hyN1Xbd6). Students who think that the class should revise some aspect of the guidelines must use the GitHub issue tracker for that repository to suggest, discuss, and implement any required changes.
+    A = Turn Left ⬅️
+    S = Drive Backwards ⬇️
+    D = Turn Right ➡️
+    F = Stop Moving ⏹️
 
-By working on and completing this assignment you agree to use the hardware given to you in a responsible manner. Each team is responsible for the safety and security of the robot while it is in your possession. You are allowed to take the robots used in this project outside of ALIC but you have to return all parts at the completion of this project, or if requested, at the end of the semester.
+    Z = Play Song 1 🎵
+    X = Play Song 2 🎵
+    C = Play Song 3 🎵
+    V = Pause Music ⏸️
 
-## Summary
+    P = Stop Music Player ⏹️
 
-This project assignment invites you to work in individually or in a team of two or three to implement a robot fulfilling a specific goal/task. Your project should design and implement a robotic system for some application of your choice using one of the robotic platforms used in this course. You could select to design and implement a multi-robot system, where more than one robot complete the goal/task, in which case it might be appropriate for two or more teams to collaborate.
+    📨 Enter your commands below:
+```
 
-## Team Assignments
+## Project Implementation Details
 
-You are invited to work in a self-selected team of two or three. Alternatively, you are also able to work individually. Once you have identified your team or that you prefer to work individually, please indicate it in the [team assignments](https://docs.google.com/spreadsheets/d/1167k-1ZGXR8TJqWdfp61kC7IDzhSVTUTHP7-Urx7ehc/edit?usp=sharing) spreadsheet so that we can ensure we have enough robots for everyone's preferences.
+Step One: You have to connect to a GOPIGO robot that comes with the pygame module if you want to use the music feature if not, then all you need to do is run the code in the Jupyter notebook.
 
-## Core Requirements
+That's the only step needed to use our program, our GOPIGO robot already had pygame, so we did not have to manually install it. To create the program we just used our already known knowledge of while loops and if statements to code our implementation. Besides that we referenced old projects to get the commands for GOPIGO. Makell already knew a bit about pygame, so he was able to implement that in pretty easily.
 
-1. Your project must be approved by the instructor before you start working on it. The instructor will assess the viability of proposed projects after the lab session on November 17th and provide feedback via a review in GitHub Classroom pull request.
-2. Your project must be developed for a specific application using a robotic system. You need to research the problem you select to get an idea of what has been already done. You must include references to existing work in your final report and justify why using your particular system is appropriate.
-3. Your project must have an implementation component. You may write your code from scratch or reuse and extend some existing code. Obviously, anything you use that is not yours must be documented (in the source code and in the report).
-4. Your project must be extensive enough to qualify as a project (think of an extension for one of the lab projects), but not too extensive so that you can not finish it by the deadline.
+## Experimental Results
 
-## Project Ideas
+Experiment One: We commanded it while playing wii music. It was able to run fine while playing the music, even when we inputted new commands it didn't interfere with the music command. At first we thought that we may have had to make a separate list just to store the music inputs, but we didn't.
 
-You are welcome to reuse existing code but you must either customize it or extend it. Taking existing code and just getting it to work does not constitute a project! Below are some ideas and resources, you are welcome to use your own search wizardry to find other helpful resources.
+Experiment Two: We commanded it while playing wii music, then switched between the other two tracks. The music commands and movement commands didn't interfere with each other and worked independently. We were able to change tracks smoothly with no interruption to the robots movements.
 
-### gopigo
+Experiment Three: We command it after we quit out of the pygame module, although it was able to move fine, it would error if we tried to input any music commands quitting the program.
 
-- [Dexter Industries sample projects](https://github.com/DexterInd/GoPiGo3/tree/master/Projects):
+## Ethical Implications
 
-  - object avoidance robot
-  - empathy bot
-  - lane or object tracker
-  - compass robot
+1. Who would typically make the technology of the similar type as your project? Why?
 
-- [ROS with gopigo](https://github.com/ros-gopigo3/gopigo3) (includes teleop). Another [ROS2 with gopigo reference](https://github.com/slowrunner/ROS2-GoPiGo3).
+Developers interested in making robots easier to use and interact with. As interfaces like the one we made are an easier way for those who don't know code to enjoy and develop interest in robots.
 
-### bebop
+1. Who are the intended users of this robotic application? How does this technology benefit them?
 
-- Search and rescue using drones. Can be implemented using pyparrot with Bebop drones and a search algorithm, such as A*.
-- Product delivery to a specific location using drones and pyparrot library.
-- Capture the flag using drones and AR Code reader. Can be implemented using pyparrot and [ar-markers library](https://github.com/pablodiegoss/pymarker).
+People new to interacting with GOPIGO, and experienced users who want to use GOPIGO for other tasks without having to code themselves.
 
-### evoarm
+1. Who is not supposed to use this technology? Why?
 
-- Tick Tac Toe, Towers of Hanoi, or other game using arm manipulation.
-- Warehouse box manipulation.
-- Drawing.
-- [Alternate arm control](https://github.com/Atli-A/RobotWebControl)
+You may want to supervise children and neurodivergent people for their safety as it could become a hazard or disturbence.
 
-### turtlebot
+1. How can the type of robotic application implemented in your project cause harm?
 
-- [Various navigation strategies](https://github.com/turtlebot/turtlebot4_tutorials/tree/galactic/turtlebot4_python_tutorials/turtlebot4_python_tutorials) with [turtlebot 4 navigator](https://turtlebot.github.io/turtlebot4-user-manual/tutorials/navigation.html#turtlebot-4-navigator).
-- Object recognition. See the bottom of [TurtlebotIsGo Unit](https://github.com/turtlebot/TurtleBot4Lessons/blob/main/units/Unit00-TB4-Introduction/L02-TurtleBotIsGo/U00-L02-TurtleBotIsGo.md) to see how to enable the camera in RViz.
-- Multi-robot information exchange using ROS for some task, for example sending command from one turtlebot to another.
+It could causes people to trip if not used carefully.
 
-### Robot Simulation
+1. What solutions can be developed to avoid the harm caused by this type of technology or to fix the harm?
 
-- Implement an application task using a [Turtlebot 4 simulation](https://github.com/turtlebot/TurtleBot4Lessons/blob/main/units/Unit00-TB4-Introduction/L01-IgnitionBlastoff/U00-L01-IgnitionBlastoff.md).
-- Implement an application task in [Gazebo](https://classic.gazebosim.org/tutorials).
-
-## Proposal
-
-You are invited to develop a project idea by the end of the lab session on November 17th. In the proposal document, please address all TODO tags that ask you to document your idea, outline acceptance criteria, illustrate its feasibility, and indicate whether additional hardware is needed. The instructor will provide feedback soon after proposal submission and may ask to adjust the proposed idea or its acceptance criteria.
-
-## Working Prototype and Progress Report
-
-During the lab session on Thursday, December 1st, each team will participate in demonstrating their working prototype. Prototype here means a functional but not a final version of a robotic system. This prototype should contain implementation of partial functionality of your project idea. This prototype should be ready to be demonstrated during the robotics community event. You are also responsible for complete a progress report document by the end of the lab session on December 1st.
-
-## Project Demonstrations
-
-At the beginning of the class session on Thursday, December 13th, each team will be given an opportunity to demonstrate their project. When the class session starts, teams will be given a few minutes to set up their demonstrations and get them running. Then, class members will participate in an interactive demonstration session, where everyone will be able to view each demonstration.
-
-## Assessment
-
-The grade that a student receives on this assignment will have the following components.
-
-- **GitHub Actions CI Build Status [up to 5%]:**: For final project repository associated with this assignment students will receive a checkmark grade if their last before-the-deadline build passes.
-
-- **Mastery of Verbal Explanation during the Demonstration [up to 15%]:**: Since the ability to communicate technical details of a project is crucial to building successful software and hardware applications, a portion of students' project grade will be determined based on the quality of the project demonstration during prototype and final demonstrations.
-
-- **Mastery of Technical Writing [up to 25%]:**: Students will also receive a part of their grade when the responses to the writing prompts presented in the `report.md` reveal a proficiency of both writing skills and technical knowledge. To receive full points of this component, the submitted writing should have correct spelling, grammar, and punctuation in addition to following the rules of Markdown and providing complete and conceptually and technically accurate answers.
-
-  - Please note that the "Check Spelling" GitHub Actions check may flag proper nouns or other real words if the dictionary it uses does not contain them. If your "Check Spelling" GitHub Actions check is failing due to a correctly spelled word being incorrectly flagged as "unknown" by CSpell, you will need to add the word to the list of words in `.github/cspell.json`.
-
-- **Mastery of Technical Knowledge and Skills [up to 55%]**: Students will receive a portion of their assignment grade when their project design and implementation reveals that they have mastered all of the technical knowledge and skills developed during the completion of this project. Any written programs must be inside `src/` directory. As a part of this grade, the instructor will assess aspects of the project including, but not limited to, the appropriate design of the robot task, the completeness and correctness of the implemented software, effectiveness of experiments, the use of effective source code comments and Git commit messages, and satisfaction of the acceptance criteria set up by the team.
-
-- **Continuous Progress [up to 40% deducted points]**: To ensure equal team effort and timely troubleshooting, students may lose up to 40% of points from their final deliverable for not demonstrating continuous team effort on this project. Each activity not submitted by the stated deadline in the [Timeline](#timeline) section by ALL team members will result in -10% unless the effected team member or the whole team (if the entire team was effected) can demonstrate circumstances beyond their control (e.g., illness, hardware challenges unsolvable in time, etc.).
-
-All grades for this project will be reported through a student's gradebook GitHub repository.
-
-### GatorGrade
-
-You can check the baseline writing and commit requirements of this project by running department's assignment checking `gatorgrade` tool. To use `gatorgrade`, you first need to make sure you have Python installed. Then, you need to install `gatorgrade`:
-
-- First, [install `pipx`](https://pypa.github.io/pipx/installation/)
-- Then, install `gatorgrade` with `pipx install gatorgrade`
-
-Finally, you can run `gatorgrade` to check baseline writing and commit requirements:
-
-`gatorgrade --config config/gatorgrade.yml`
-
-## Assistance
-
-If you are having trouble completing any part of this project, then please talk with the course instructor during the laboratory session. Alternatively, you may ask questions in the Discord channel for this course. Finally, you can schedule a meeting during the course instructor's office hours.
+A proximity or distance sensor that can detect when it's about to collide with something and command it to stop to minimize the damage it can cause to others.
